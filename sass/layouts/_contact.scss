@@ -1,0 +1,168 @@
+
+.contact_left {
+    .image_contact {
+        width: 95%;
+        margin-top: 30px;
+    }
+}
+.form_container {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    // overflow: hidden;
+    box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+    padding: 0px 30px;
+    width: 70%;
+    .image_contact {
+        width: 90%
+    }
+
+    .form_tittle {
+        @include textStyle($color-black , 39px , $fw-7 ) ; 
+        margin: 40px 0px ;
+    }
+    .form_input{
+        position: relative;
+        max-width: 50%;
+        
+        .icon_form {
+            position: absolute;
+            top: 16px;
+            left: 18px;
+            color: $color-pink;
+            font-size: 15px;
+        }
+       input {
+            outline: none;
+            font-size: 14px;
+            border-radius: 50px;
+            background: transparent;
+            padding: 10px 5px 10px 40px;
+            border: 1px solid rgba(0,0,0,.1);
+            transition: all .5s;
+            width: 100%;
+            
+            &:focus {
+                box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                border: 1px solid rgba(0,0,0,.3);
+            }
+        }
+    }
+    .input_name {
+        margin-right: 5%;
+    }
+    .form_select {
+        position: relative;
+        .icon_selectField {
+            position: absolute;
+            color: $color-pink;
+            font-size: 15px;
+            top: 27px;
+            left: 18px;
+        }
+        .icon_selectDropdown {
+            position: absolute;
+            color: $color-pink;
+            font-size: 13px;
+            top: 27px;
+            right: 18px;
+            pointer-events: none;
+            
+        }
+        .select_field {
+            width: 100%;
+            border-radius: 50px;
+            padding: 5px 5px 5px 40px;
+            margin: 15px 0px;
+            border: 1px solid rgba(0,0,0,.1);
+            transition: all .5s;
+            appearance: none;
+            cursor: pointer;
+            color: $color-pink;
+            font-size: 14px;
+            &:focus  {
+                box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                border: 1px solid rgba(0,0,0,.3);
+            }
+            &:focus-visible {
+                box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                border: 1px solid rgba(0,0,0,.3);
+                outline: none;
+            }
+            option {
+                transition: all .5s;
+                &:hover {
+                    background:transparent;
+               
+                }
+                
+            }
+        }
+    }
+    .form_textarea {
+        position: relative;;
+        .icon_textarea {
+            position: absolute;
+            top: 20px;
+            left: 18px;
+            color: $color-pink;
+            font-size: 15px;
+            transition: all .3s;
+        }
+        textarea {
+            padding: 12px 12px 25px 42px;
+            border-radius: 20px;
+            width: 100%;
+            outline: none;
+            border: 1px solid rgba(0,0,0,.3);
+            
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                border: 1px solid rgba(0,0,0,.3);
+               
+            }
+            &:focus-visible {
+                outline: none;
+                box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                border: 1px solid rgba(0,0,0,.3);
+                
+            }
+
+        }
+    }
+    .form_button {
+        .btnForm {
+           @include textStyle($color-white , 14px , $fw-6) ; 
+           @include buttonStyle($color-pink , 1px solid transparent , 50px , 13px 56px) ; 
+           box-shadow: 0 0 0 3em #b61984 inset;
+           transition: all .5s;
+           position: relative;
+           z-index: 1;
+           margin: 40px 0px 75px 0px;
+           &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100% ; 
+            height: 100%;
+            border-radius: 50px;
+            background: $color-white;
+            z-index: -1;
+            transform: scale(0);
+            transition: all .3s;
+           }
+           &:hover {
+                @include textStyleHover($color-pink) ; 
+               border: 1px solid $color-pink;
+           }
+           &:hover::before {
+            transform: scale(1);
+           }
+
+           
+        }
+    }
+    
+}

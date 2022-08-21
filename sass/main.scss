@@ -1,0 +1,15 @@
+
+// 1. Import file trong folder helper
+@import "./helper/variables" ; 
+@import "./helper/mixin" ; 
+// 2. Import file trong folder vendor
+// 3. Import file trong folder base
+@import "./base/reset" ; 
+// 4. Inport file trong component
+@import "./components/button" ;
+// 5. Import file trong layouts
+@import "./layouts/header" ; 
+@import "./layouts/carousel" ; 
+@import "./layouts/ourteam" ; 
+@import "./layouts/contact" ; 
+@import "./layouts/footer" ;  

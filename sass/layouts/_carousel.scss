@@ -1,0 +1,18 @@
+.carousel {
+    background: url("../../img/yellow_top_wave_01.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    .carousel_tittle1 {
+        @include textStyle($color-pink , $fs-5 , $fw-6 ) ; 
+        margin: 0xp 0px 8.25px;
+        
+    }
+    .carousel_tittle2 {
+        @include textStyle($color-black , $fs-6 , $fw-7 ) ; 
+        
+    }
+    .image_carousel {
+        margin-top: 65px;
+    }
+}

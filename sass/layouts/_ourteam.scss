@@ -1,0 +1,61 @@
+.team {
+    background: $color-blue;
+    position: relative;
+    width: 100%;
+    padding: 200px 0px;
+    .team_img_top {
+        img {
+            position: absolute;
+            top: -230px;
+            left: 0px;
+            width: 100%;
+            overflow: hidden;
+           }
+    }
+    .team_item {
+        z-index: 3;
+        .card {
+            border-radius: 15px;
+            transition: all 1s;
+            &:hover {
+                box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+            }
+            .card_image {
+                overflow: hidden;
+                .card-img-top {
+                    border-radius: 15px 15px 0px 0px ;
+                   
+                    transition: all 1s; 
+                }
+            }
+            
+            &:hover .card-img-top {
+                transform: scale(1.05);
+                
+            }
+            
+            .card-body {
+                border-radius: 0px 15px 15px 0px;
+                .member_country {
+                 @include textStyle($color-pink , $fs-7 , $fw-6) ;
+                 margin: 0px 
+                } 
+                .member_name {
+                 @include textStyle($color-black , $fs-8 , 700) ; 
+                 margin-bottom: 15px;
+                }
+             }
+        }
+        
+    }
+    .team_img_bottom {
+       img {
+        position: absolute;
+        bottom: 0px;
+        left: -730px;
+        width: 150%;
+        overflow: hidden;
+        z-index: 0;
+       }
+    }
+}
