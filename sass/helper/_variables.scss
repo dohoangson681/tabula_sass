@@ -18,3 +18,10 @@ $fs-7 : 11.25px ;
 $fs-8 : 23.25px ;  
 
 $bdr-1 : 50px ; 
+
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px
+)

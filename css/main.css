@@ -11,6 +11,9 @@
   z-index: 10;
   top: 0px;
 }
+.header .loGo {
+  display: block;
+}
 
 .header__container {
   width: 82%;
@@ -52,6 +55,12 @@
 .header__container .navbar-nav .nav-item .nav-link:hover:after {
   transform: scale(1.3);
 }
+.header__container .navbar-nav .nav-item.active .nav-link {
+  color: #b61984;
+}
+.header__container .navbar-nav .nav-item.active .nav-link:after {
+  transform: scale(1);
+}
 .header__container .buttons_header_contact .btnPhoneContact {
   background: #b61984;
   border: 1px solid pink;
@@ -61,30 +70,37 @@
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+  border: 1px solid #b61984;
   box-shadow: 0 0 0 3em #b61984 inset;
+  transition: all 0.5s;
   position: relative;
+  display: inline-block;
+  z-index: 1;
 }
 .header__container .buttons_header_contact .btnPhoneContact i {
   padding-right: 0.5em;
   font-size: 13px;
 }
-.header__container .buttons_header_contact .btnPhoneContact .overlay_buttonPhoneContact {
+.header__container .buttons_header_contact .btnPhoneContact::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0px;
   left: 0px;
-  transform: scaleY(0) scaleX(0.7);
-  background-color: white;
-  transition: all 0.2s;
+  width: 100%;
+  height: 100%;
   border-radius: 50px;
-  color: #b61984;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #b61984;
+  transform: scale(0);
+  transition: all 0.3s;
+  z-index: -1;
 }
-.header__container .buttons_header_contact .btnPhoneContact:hover .overlay_buttonPhoneContact {
-  transform: scaleY(1) scaleX(1);
+.header__container .buttons_header_contact .btnPhoneContact:hover {
+  color: #b61984;
+  border: 1px solid #b61984;
+}
+.header__container .buttons_header_contact .btnPhoneContact:hover::before {
+  background: #fff;
+  transform: scale(1);
 }
 .header__container .buttons_header_contact .icon_header_contact {
   color: #181818;
@@ -97,6 +113,58 @@
   color: #b61984;
 }
 
+.header.sticky {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
+.header.sticky .loGo {
+  display: none;
+}
+.header.sticky .nav-item .nav-link::after {
+  bottom: -10px;
+  transform: scale(0);
+}
+.header.sticky .nav-item.active .nav-link::after {
+  transform: scale(1);
+}
+.header.sticky .btnPhoneContact {
+  padding: 8px 25px;
+  font-size: 14px;
+  margin: 6px;
+}
+.header.sticky .btnPhoneContact i {
+  font-size: 12px;
+}
+.header.sticky .icon_header_contact {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header .loGo img {
+    width: 50px !important;
+  }
+  .carousel {
+    margin-top: 6vw;
+  }
+  .carousel .carousel_tittle1 {
+    font-size: 20px !important;
+  }
+  .carousel .carousel_tittle2 {
+    font-size: 40px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .carousel {
+    margin-top: 6vw;
+  }
+  .carousel .carousel_tittle1 {
+    font-size: 10px !important;
+  }
+  .carousel .carousel_tittle2 {
+    font-size: 20px !important;
+  }
+}
 .carousel {
   background: url("../../img/yellow_top_wave_01.png");
   background-repeat: no-repeat;

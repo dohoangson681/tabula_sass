@@ -6,3 +6,14 @@
 @mixin textStyleHover($color ) {
     color:$color ;
 }
+@mixin responsive($screen){
+    @if(map-has-key($map: $breakpoints, $key:$screen )){
+        // nếu tìm trong mảng breakpoint có tên màn hình thỏa mãn thì sẽ return true và thực hiện code trong hàm if
+        $value : map-get($map : $breakpoints , $key : $screen ) ; 
+        @media screen and (max-width : $value ) {
+            @content;
+        }
+    }@else {
+        @warn "Sai cmn tên màn hình r !" ; 
+    }
+}
