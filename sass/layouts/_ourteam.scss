@@ -2,14 +2,15 @@
     background: $color-blue;
     position: relative;
     width: 100%;
-    padding: 200px 0px;
+    padding: 60px 0px 0px;
     .team_img_top {
-        img {
             position: absolute;
-            top: -230px;
-            left: 0px;
+            top: -28%;
+            left: 0%;
+        img {
+            
             width: 100%;
-            overflow: hidden;
+           
            }
     }
     .team_item {
@@ -49,13 +50,21 @@
         
     }
     .team_img_bottom {
-       img {
         position: absolute;
-        bottom: 0px;
-        left: -730px;
-        width: 150%;
-        overflow: hidden;
+        bottom: 0%;
+        left: 0%;
         z-index: 0;
+        margin-bottom: 0px;
+       img {
+        width: 100%;
        }
+    }
+    .nothing_team {
+        position: absolute;
+        height: 150px;
+        bottom: 0%;
+        left: 0px;
+        width: 100%;
+        background: $color-white;
     }
 }

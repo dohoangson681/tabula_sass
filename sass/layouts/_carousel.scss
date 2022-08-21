@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
+    margin-bottom: 30px;
     .carousel_tittle1 {
         @include textStyle($color-pink , $fs-5 , $fw-6 ) ; 
         margin: 0xp 0px 8.25px;

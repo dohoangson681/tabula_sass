@@ -1,8 +1,17 @@
+.contact {
+    margin-top: 100px;
+    .contact_content {
+        width: 80%;
+        margin: auto;
+    }
+}
 
 .contact_left {
     .image_contact {
-        width: 95%;
+        width: 85%;
         margin-top: 30px;
+        margin-left: 140px;
+        margin-bottom: 20px; 
     }
 }
 .form_container {
@@ -12,9 +21,10 @@
     box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
     padding: 0px 30px;
     width: 70%;
-    .image_contact {
-        width: 90%
-    }
+    margin-left: 82px;
+    margin-top: 53px;
+   
+    
 
     .form_tittle {
         @include textStyle($color-black , 39px , $fw-7 ) ; 

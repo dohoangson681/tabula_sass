@@ -1,7 +1,21 @@
 .footer {
-    background-color: $color-pink;
+    background-image: url("../../img/footer_background.jpg");
+    background-position: bottom;
+    background-size: 110%;
+    background-repeat: no-repeat;
     position: relative;
-    .footer_imgbg_top {}
+    .footer_imgbg_top {
+        position: absolute;
+        top: -68%;
+        left: 0px;
+        z-index: -10;
+        img {
+            width: 100%;
+        }
+       
+       
+
+    }
     .footer_container {
         padding: 120px 0px;
         .footer_content {
@@ -119,5 +133,7 @@
            }
         }
     }
-    .footer_imgbg_bottom {}
+    .footer_pad{
+        padding-top: 100px;
+    }
 }
